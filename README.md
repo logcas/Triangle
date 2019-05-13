@@ -1,34 +1,24 @@
-# triangle
+# TriangleUI
+Vue.js2.x Component Toolkit
 
-## Project setup
+## 安装
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install triangle-ui -S
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## 使用
+```js
+import triangleUI from 'triangle-ui';
+import 'triangle-ui/dist/triangle-ui.css';
+
+Vue.use(triangleUI);
 ```
 
-### Run your tests
-```
-npm run test
-```
+## 文档
+[点这里](https://logcas.github.io/triangle)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 浏览器支持
+IE10+
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## LICENSE
+MIT
