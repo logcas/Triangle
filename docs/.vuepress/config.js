@@ -29,6 +29,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/form/button',
+          '/form/input'
         ]
       },
     ]
