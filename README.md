@@ -15,7 +15,7 @@ Vue.use(triangleUI);
 ```
 
 ## 文档
-[点这里](https://logcas.github.io/triangle)
+[点这里](https://logcas.github.io/Triangle)
 
 ## 浏览器支持
 IE10+

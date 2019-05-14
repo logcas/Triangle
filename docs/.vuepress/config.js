@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  base: '/Triangle/',
   title: 'TriangleUI',
   description: 'Vue 2.x Component Toolkit',
   themeConfig: {
