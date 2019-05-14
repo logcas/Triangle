@@ -1,11 +1,13 @@
 import Button from './components/Button';
 import Icon from './components/Icon';
+import Input from './components/Input';
 
 import '@/common/js/iconfont.js';
 
 const components = [
   Button,
-  Icon
+  Icon,
+  Input
 ];
 
 const install = function install(Vue) {

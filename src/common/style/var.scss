@@ -95,12 +95,20 @@ $title-color                : #2C405A;
 /* common */
 @mixin focus-shadow($shadowColor) {
   &:active, &:focus {
-    box-shadow: 0 0 0px 2px $shawdowColor;
+    box-shadow: 0 0 0px 2px $shadowColor;
   }
+}
+
+@mixin control-border($color) {
+  border-radius: $border-radius;
+  border-style: solid;
+  border-color: $color;
+  border-width: $border-width;
 }
 
 $border-radius: 5px;
 $border-width: 1px;
+$border-color: $grey-300;
 
 /* button */
 $button-font-size: 14px;
@@ -116,3 +124,15 @@ $button-icon-radius-l: 16px;
 
 /* font */
 $font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+$font-size: 14px;
+$font-size-sm: 12px;
+$font-size-l: 16px;
+
+/* input */
+$input-padding: $button-padding;
+$input-padding-sm: $button-padding-sm;
+$input-padding-l: $button-padding-l;
+$input-padding-left: 7px;
+$input-padding-left-sm: 5px;
+$input-padding-left-l: 9px;
+$input-icon-size: 16px;

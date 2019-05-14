@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import Button from '../src/components/Button';
-import Icon from '../src/components/Icon';
-Vue.use(Button);
-Vue.use(Icon);
+import Triangle from '@/index.js';
+
+Vue.use(Triangle);
 
 Vue.config.productionTip = false
 

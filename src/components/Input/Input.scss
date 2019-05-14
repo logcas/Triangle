@@ -1,0 +1,152 @@
+@import '@/common/style/index.scss';
+
+.tri-input {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+
+  .slot {
+    display: inline-block;
+    padding: $input-padding;
+    font-size: $font-size;
+    border-color: $border-color;
+    border-style: solid;
+    border-width: 1px;
+    background: $grey-100;
+    line-height: 16px;
+
+    &.slot-button {
+      user-select: none;
+      cursor: pointer;
+
+      &:active {
+        background: $border-color;
+      }
+    }
+
+    &.small {
+      padding: $input-padding-sm;
+    }
+
+    &.large {
+      padding: $input-padding-l;
+    }
+
+    &.prepend {
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      border-right-width: 0;
+    }
+
+    &.append {
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      border-left-width: 0;
+    }
+  }
+
+  .tri-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $grey-500;
+
+    &.pre {
+      margin: 0 $input-padding;
+
+      & + .inputer {
+        &.has-icon {
+          padding-left: $input-padding-left + $input-icon-size;
+
+          &.large {
+            padding-left: $input-padding-left-l + $input-icon-size;
+          }
+
+          &.small {
+            padding-left: $input-padding-left-sm + $input-icon-size;
+          }
+        }
+      }
+    }
+
+    &.back {
+      right: 0;
+      margin: 0 $input-padding;
+
+      & + .inputer {
+        &.has-icon {
+          padding-right: $input-padding-left + $input-icon-size;
+
+          &.large {
+            padding-right: $input-padding-left-l + $input-icon-size;
+          }
+
+          &.small {
+            padding-right: $input-padding-left-sm + $input-icon-size;
+          }
+        }
+      }
+    }
+  }
+
+  .inputer {
+    outline: none;
+    padding: $input-padding;
+    font-size: $font-size;
+    font-family: $font-family;
+    color: $text-color;
+    transition: box-shadow .2s ease-in;
+    line-height: 16px;
+    @include control-border($border-color);
+
+    &:disabled, &:read-only {
+      border-color: $grey-300;
+      background: $grey-100;
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &.append {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &.prepend {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:focus {
+      border-color: $color-primary;
+      @include focus-shadow($brand-blue-100);
+    }
+
+    &.success {
+      border-color: $color-success;
+      @include focus-shadow($green-100);
+    }
+
+    &.error {
+      border-color: $color-error;
+      @include focus-shadow($red-100);
+    }
+
+    &.warning {
+      border-color: $color-warning;
+      @include focus-shadow($yellow-100);
+    }
+
+    &.info {
+      border-color: $color-info;
+      @include focus-shadow($brand-blue-100);
+    }
+
+    &.small {
+      padding: $input-padding-sm;
+    }
+
+    &.large {
+      padding: $input-padding-l;
+    }
+  }
+}
