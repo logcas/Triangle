@@ -1,0 +1,65 @@
+@import '@/common/style/index.scss';
+
+.tri-checkbox {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 5px;
+
+  .tri-checkbox-input {
+    position: relative;
+    margin-right: 19px;
+    
+    .checker {
+      position: relative;
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid $color-primary;
+      border-radius: $border-radius;
+      background: #fff;
+      transition: all .2s ease-in;
+      outline: none;
+
+      &:hover {
+        cursor: pointer;
+        background: $brand-blue-50;
+      }
+
+      &:checked {
+        background: $color-primary;
+        &::after {
+          content: " ";
+          display: block;
+          position: absolute;
+          left: 25%;
+          width: 4px;
+          height: 8px;
+          border-right: 3px solid #fff;
+          border-bottom: 3px solid #fff;
+          transform: rotate(45deg);
+        }
+      }
+
+      &:disabled {
+        border-color: $border-color;
+        background: $grey-100;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+
+        &:checked {
+          &::after {
+            border-color: $grey-800;
+          }
+        }
+      }
+    }
+  }
+}

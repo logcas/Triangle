@@ -1,13 +1,17 @@
 import Button from './components/Button';
 import Icon from './components/Icon';
 import Input from './components/Input';
+import Checkbox from './components/Checkbox';
+import CheckboxGroup from './components/Checkbox-Group';
 
 import '@/common/js/iconfont.js';
 
 const components = [
   Button,
   Icon,
-  Input
+  Input,
+  Checkbox,
+  CheckboxGroup
 ];
 
 const install = function install(Vue) {
