@@ -23,6 +23,20 @@
       <tri-input v-model="msg" iconName="search" status="success" readonly/><br/><br/>
       {{msg}}
     </div>
+    <div>
+      <h1>Checkbox</h1>
+      <tri-checkbox v-model="isChecked">Hello,world</tri-checkbox>
+      <tri-checkbox v-model="isChecked" disabled>禁用的</tri-checkbox>
+      {{ isChecked }}
+      <br>
+      <tri-checkbox-group v-model="value">
+        <tri-checkbox value="北京">北京</tri-checkbox>
+        <tri-checkbox value="广州">广州</tri-checkbox>
+        <tri-checkbox value="深圳">深圳</tri-checkbox>
+        <tri-checkbox value="上海">上海</tri-checkbox>
+      </tri-checkbox-group>
+      <p>{{ value }}</p>
+    </div>
   </div>
 </template>
 
@@ -36,7 +50,9 @@ export default {
   data() {
     return {
       isLoading: true,
-      msg: 'hello,world'
+      msg: 'hello,world',
+      isChecked: true,
+      value: ['广州', '深圳']
     }
   }
 }
