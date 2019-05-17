@@ -1,0 +1,92 @@
+@import '@/common/style/index.scss';
+
+.tri-switch-wrapper {
+  .text {
+    display: inline-block;
+    vertical-align: middle;
+    transition: $transition;
+
+    &.active {
+      margin-right: 5px;
+    }
+
+    &.inactive {
+      margin-left: 5px;
+    }
+  }
+}
+
+.tri-switch {
+  display: inline-block;
+  position: relative;
+  transition: $transition;
+  user-select: none;
+  vertical-align: middle;
+  
+  &.disabled {
+    background: $grey-300;
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  .dot {
+    position: absolute;
+    top: $switch-dot-gap;
+    left: $switch-dot-gap;
+    background: $color-white;
+    transition: $transition;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.small {
+    min-width: $switch-min-width-sm;
+    height: $switch-height-sm;
+    border-radius: $switch-dot-radius-sm + $switch-dot-gap;
+
+    .dot {
+      width: $switch-dot-width-sm;
+      height: $switch-dot-width-sm;
+      border-radius: $switch-dot-radius-sm;
+    }
+
+    &.activate .dot {
+      left: calc(100% - #{$switch-dot-gap} - #{$switch-dot-width-sm});
+    }
+  }
+
+  &.normal {
+    min-width: $switch-min-width;
+    height: $switch-height;
+    border-radius: $switch-dot-radius + $switch-dot-gap;
+
+    .dot {
+      width: $switch-dot-width;
+      height: $switch-dot-width;
+      border-radius: $switch-dot-radius;
+    }
+
+    &.activate .dot {
+      left: calc(100% - #{$switch-dot-gap} - #{$switch-dot-width});
+    }
+  }
+
+  &.large {
+    min-width: $switch-min-width-l;
+    height: $switch-height-l;
+    border-radius: $switch-dot-radius-l + $switch-dot-gap;
+
+    .dot {
+      width: $switch-dot-width-l;
+      height: $switch-dot-width-l;
+      border-radius: $switch-dot-radius-l;
+    }
+
+    &.activate .dot {
+      left: calc(100% - #{$switch-dot-gap} - #{$switch-dot-width-l});
+    }
+  }
+}

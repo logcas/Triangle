@@ -37,6 +37,12 @@
       </tri-checkbox-group>
       <p>{{ value }}</p>
     </div>
+    <div>
+      <h1>Switch</h1>
+      <tri-switch size="small" v-model="isActivate" disabled active-text="activate" inactive-text="unactivate"/><br/><br/>
+      <tri-switch v-model="isActivate" disabled active-color="#13CE66" inactive-color="#FF4949" active-text="activate" inactive-text="unactivate"/><br/><br/>
+      <tri-switch size="large" v-model="isActivate" disabled active-text="activate" inactive-text="unactivate"/><br/><br/>
+    </div>
   </div>
 </template>
 
@@ -52,7 +58,8 @@ export default {
       isLoading: true,
       msg: 'hello,world',
       isChecked: true,
-      value: ['广州', '深圳']
+      value: ['广州', '深圳'],
+      isActivate: false,
     }
   }
 }
