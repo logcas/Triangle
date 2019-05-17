@@ -4,6 +4,7 @@ import Input from '@/components/Input/Input.vue';
 import IconDisplayer from '@/components/Icon/IconDisplayer.vue';
 import Checkbox from '@/components/Checkbox/Checkbox.vue';
 import CheckboxGroup from '@/components/Checkbox-Group/CheckboxGroup.vue';
+import Switch from '@/components/Switch/Switch.vue';
 
 const components = [
   Button,
@@ -11,7 +12,8 @@ const components = [
   IconDisplayer,
   Input,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Switch
 ]
 
 export default ({
