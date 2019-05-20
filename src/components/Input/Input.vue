@@ -10,7 +10,7 @@
       <slot name="prepend"></slot>
     </div>
 
-    <tri-icon :class="iconPosition" :iconName="iconName" v-if="iconName"/>
+    <tri-icon :class="iconPosition" :iconName="iconName" v-if="iconName" style="font-size: 14px;"/>
 
     <input
       class="inputer"
