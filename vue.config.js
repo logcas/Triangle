@@ -6,6 +6,16 @@ module.exports = {
     filename: 'index.html'
   }
  },
+ configureWebpack: {
+   module: {
+     noParse: /iconfont/
+   },
+   resolve: {
+     alias: {
+       'common': 'src/common'
+     }
+   }
+ },
  chainWebpack: config => {
   config.module
     .rule('js')

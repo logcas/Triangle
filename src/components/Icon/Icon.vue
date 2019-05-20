@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import '@/common/js/iconfont.js';
 // 图标
 // @group General
 export default {

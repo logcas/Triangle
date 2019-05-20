@@ -5,8 +5,6 @@ import Checkbox from './components/Checkbox';
 import CheckboxGroup from './components/Checkbox-Group';
 import Switch from './components/Switch';
 
-import '@/common/js/iconfont.js';
-
 const components = [
   Button,
   Icon,
@@ -18,7 +16,7 @@ const components = [
 
 const install = function install(Vue) {
   components.forEach(component => {
-    Vue.component(component.name, component);
+    component.install(Vue);
   });
 }
 
