@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import '@/common/js/iconfont.js';
 // 图标
 // @group General
 export default {
@@ -28,6 +27,9 @@ export default {
       type: String,
       default: '#000'
     }
+  },
+  mounted() {
+    import('@/common/js/iconfont.js').then(() => {});
   }
 };
 </script>
