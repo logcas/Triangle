@@ -1,0 +1,51 @@
+@import '@/common/style/index.scss';
+
+@mixin TagStatus($color) {
+  background: $color;
+  border: 1px solid $color;
+  color: $color-white;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.tri-tag {
+  padding: $tag-padding;
+  font-size: $font-size-sm;
+  border-radius: $border-radius;
+
+  &.default {
+    background: $tag-background-default;
+    border: 1px solid $border-color;
+  }
+
+  &.primary {
+    @include TagStatus($color-primary);
+  }
+
+  &.warning {
+    @include TagStatus($color-warning);
+  }
+
+  &.error {
+    @include TagStatus($color-error);
+  }
+
+  &.success {
+    @include TagStatus($color-success);
+  }
+
+  .close-btn {
+    margin-left: $tag-padding-x;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

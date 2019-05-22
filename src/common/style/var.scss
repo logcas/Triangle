@@ -157,3 +157,9 @@ $switch-dot-gap: 2px;
 $switch-height: 2 * $switch-dot-gap + $switch-dot-width;
 $switch-height-sm: 2 * $switch-dot-gap + $switch-dot-width-sm;
 $switch-height-l: 2 * $switch-dot-gap + $switch-dot-width-l;
+
+/* Tag */
+$tag-background-default: $grey-100;
+$tag-padding-x: 5px;
+$tag-padding-y: 3px;
+$tag-padding: $tag-padding-y $tag-padding-x;
