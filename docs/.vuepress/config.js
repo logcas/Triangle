@@ -21,6 +21,7 @@ module.exports = {
         title: 'General 通用',
         collapsable: false,
         children: [
+          '/general/tag',
           '/general/icon'
         ]
       },
