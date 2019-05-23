@@ -6,6 +6,9 @@ import Checkbox from '@/components/Checkbox/Checkbox.vue';
 import CheckboxGroup from '@/components/Checkbox-Group/CheckboxGroup.vue';
 import Switch from '@/components/Switch/Switch.vue';
 import Tag from '@/components/Tag/Tag.vue';
+import Radio from '@/components/Radio';
+import RadioGroup from '@/components/Radio-Group';
+import RadioButton from '@/components/Radio-Button';
 
 const components = [
   Button,
@@ -15,7 +18,10 @@ const components = [
   Checkbox,
   CheckboxGroup,
   Switch,
-  Tag
+  Tag,
+  Radio,
+  RadioGroup,
+  RadioButton
 ]
 
 export default ({
