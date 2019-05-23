@@ -1,0 +1,44 @@
+@import '@/common/style/index.scss';
+
+  .tri-select-button {
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid $border-color;
+    border-left: none;
+    font-size: $font-size;
+    transition: $transition;
+
+    &.selected {
+      background: $color-primary;
+      color: $color-white;
+      &:hover {
+        background: $color-primary;
+      }
+    }
+
+    &.disabled {
+      background: $grey-100;
+      cursor: not-allowed;
+      color: $grey-800;
+      &:hover {
+        background: $grey-100;
+      }
+    }
+
+    &:first-child {
+      border-left: 1px solid $border-color;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+    }
+
+    &:last-child {
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+
+    &:hover {
+      background: $grey-200;
+    }
+  }

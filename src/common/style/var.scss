@@ -163,3 +163,11 @@ $tag-background-default: $grey-100;
 $tag-padding-x: 5px;
 $tag-padding-y: 3px;
 $tag-padding: $tag-padding-y $tag-padding-x;
+
+/* Radio */
+$radio-border-color: $grey-500;
+$radio-radius: 8px;
+$radio-width: 2 * $radio-radius;
+$radio-height: $radio-width;
+$radio-border: 1px solid $radio-border-color;
+$radio-margin: 4px;
