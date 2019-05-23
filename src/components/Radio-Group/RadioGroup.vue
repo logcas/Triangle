@@ -6,22 +6,26 @@
 
 <script>
 import Emitter from '@/mixins/Emitter';
+// 单选框组
+// @group Form
 export default {
   name: 'tri-radio-group',
   mixins: [Emitter],
   props: {
+    // v-model 相关
     value: [String, Number]
   },
   watch: {
     value(val) {
       this.broadcast('tri-radio', 'init', val);
       this.broadcast('tri-radio-button', 'init', val);
+      // 单选框组选择发生改变时触发
+      // @arg 参数为选中的值
+      this.$emit('radio-group-change', val);
     }
   },
   methods: {
     setRadio(val) {
-      this.broadcast('tri-radio', 'init', val);
-      this.broadcast('tri-radio-button', 'init', val);
       this.$emit('input', val);
     }
   },

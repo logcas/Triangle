@@ -16,19 +16,25 @@
 
 <script>
 import Emitter from '@/mixins/Emitter';
+// 单选框
+// @group Form
 export default {
   name: 'tri-radio',
   mixins: [Emitter],
   props: {
+    // v-model相关
     value: [String, Number],
+    // 单选框的值
     label: {
       type: [String, Number],
       required: true
     },
+    // 禁用
     disabled: {
       type: Boolean,
       default: false,
     },
+    // name（原生属性）
     name: String,
   },
   data() {
