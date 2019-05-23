@@ -93,6 +93,23 @@
       <tri-tag type="warning" background-color="blue" text-color="red">标签一</tri-tag>
       <tri-tag type="warning" background-color="blue" text-color="red" closable>标签一</tri-tag>
     </div>
+    <div>
+      <h1>Radio</h1>
+      <tri-radio v-model="radioVal" label="广州">广州</tri-radio>
+      <tri-radio v-model="radioVal" label="深圳">深圳</tri-radio>
+      <tri-radio v-model="radioVal" label="清远" disabled>清远</tri-radio>
+      <tri-radio v-model="radioVal" label="北京">北京</tri-radio>
+      {{ radioVal }}
+      <br>
+      <tri-radio-group v-model="radioVal2">
+        <tri-radio-button label="广州">广州</tri-radio-button>
+        <tri-radio-button label="深圳">深圳22</tri-radio-button>
+        <tri-radio-button label="清远" disabled>清远</tri-radio-button>
+        <tri-radio-button label="北京">北京</tri-radio-button>
+      </tri-radio-group>
+      <h1>{{ radioVal2 }}</h1>
+    </div>
+
   </div>
 </template>
 
@@ -109,7 +126,9 @@ export default {
       msg: "hello,world",
       isChecked: true,
       value: ["广州", "深圳"],
-      isActivate: false
+      isActivate: false,
+      radioVal: '清远',
+      radioVal2: '清远',
     };
   },
   methods: {

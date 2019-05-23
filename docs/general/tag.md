@@ -15,7 +15,9 @@ export default {
 通过设置`closable`可以使标签显示一个关闭按钮，使标签可以被关闭。当标签被关闭时，会触发`on-close`回调。
 
 <tri-tag>标签一</tri-tag>
+<ClientOnly>
 <tri-tag style="margin-left: 4px;" closable @on-close="onClose">可关闭的标签一</tri-tag>
+</ClientOnly>
 
 ```vue
 <tri-tag>标签一</tri-tag>
