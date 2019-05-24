@@ -1,0 +1,19 @@
+@import '@/common/style/index.scss';
+
+.tri-rate {
+  display: inline-block;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  .tri-icon {
+    transition: all .2s linear;
+  }
+
+  .tri-rate-text {
+    margin-left: 5px;
+    font-size: $font-size;
+  }
+}
