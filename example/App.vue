@@ -109,7 +109,19 @@
       </tri-radio-group>
       <h1>{{ radioVal2 }}</h1>
     </div>
-
+    <div>
+      <h1>Rate</h1>
+      <tri-rate/>
+      <br>
+      <tri-rate/>
+      <br>
+      <tri-rate v-model="star" size="25" @on-change="onChange" @on-hover-change="hoverChange">
+        {{ star }} 星
+      </tri-rate>
+      <tri-rate v-model="star" size="25" disabled>
+        {{ star }} 星
+      </tri-rate>
+    </div>
   </div>
 </template>
 
@@ -129,11 +141,18 @@ export default {
       isActivate: false,
       radioVal: '清远',
       radioVal2: '清远',
+      star: 2,
     };
   },
   methods: {
     tagClose(e, val) {
       console.log('tag callback:', val);
+    },
+    hoverChange(val) {
+      console.log(`hover change: ${val}`);
+    },
+    onChange(val) {
+      console.log(`on change: ${val}`);
     }
   }
 };

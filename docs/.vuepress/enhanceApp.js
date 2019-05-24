@@ -9,6 +9,7 @@ import Tag from '@/components/Tag/Tag.vue';
 import Radio from '@/components/Radio';
 import RadioGroup from '@/components/Radio-Group';
 import RadioButton from '@/components/Radio-Button';
+import Rate from '@/components/Rate';
 
 const components = [
   Button,
@@ -21,7 +22,8 @@ const components = [
   Tag,
   Radio,
   RadioGroup,
-  RadioButton
+  RadioButton,
+  Rate
 ]
 
 export default ({
