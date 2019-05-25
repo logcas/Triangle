@@ -34,7 +34,8 @@ module.exports = {
           '/form/checkbox',
           '/form/switch',
           '/form/radio',
-          '/form/rate'
+          '/form/rate',
+          '/form/select'
         ]
       },
     ]
