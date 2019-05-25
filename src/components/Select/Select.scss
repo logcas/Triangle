@@ -1,0 +1,106 @@
+@import '@/common/style/index.scss';
+
+.slide-down-enter-active, .slide-down-leave-active {
+  transition: $transition;
+  transform-origin: top center;
+}
+
+.slide-up-enter-active, .slide-up-leave-active {
+  transition: $transition;
+  transform-origin: bottom center;
+}
+
+.slide-down-enter, .slide-down-leave-to {
+  margin-top: 0;
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.slide-down-enter-to, .slide-down-leave {
+  margin-top: 5px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.slide-up-enter, .slide-up-leave-to {
+  bottom: 100%;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.slide-up-enter-to, .slide-up-leave {
+  bottom: 100%;
+  margin-bottom: 5px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+
+.tri-select {
+  position: relative;
+  display: inline-block;
+  width: $select-width;
+  @include control-border($border-color);
+  text-align: left;
+  transition: $transition;
+
+  .tri-select-wrapper:hover {
+    cursor: pointer;
+  }
+
+
+  &.focus {
+    @include control-border($color-primary);
+    box-shadow: 0 0 0px 2px $blue-200;
+  }
+
+  &.disabled {
+    background: $grey-100;
+    cursor: not-allowed;
+
+    .tri-select-input:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  .tri-select-input {
+    outline: none;
+    font-size: $font-size;
+    padding: $input-padding;
+    border: none;
+    border-radius: $border-radius;
+
+    &:read-only {
+      cursor: pointer;
+    }
+  }
+
+  .tri-select-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 28px;
+    transition: $transition;
+    color: $grey-800;
+
+    &.reverse {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  .slide-down {
+    margin-top: 5px;
+  }
+
+  .slide-up {
+    bottom: 100%;
+    margin-bottom: 5px;
+  }
+
+  .tri-select-multiple {
+    padding: 2px;
+    padding-right: 30px;
+  }
+}

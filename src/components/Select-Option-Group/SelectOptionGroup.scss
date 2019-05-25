@@ -1,0 +1,11 @@
+@import '@/common/style/index.scss';
+
+.tri-select-option-group {
+  .option-group-header {
+    font-size: $font-size-sm;
+    color: $grey-500;
+    margin: $select-group-margin;
+    padding: $select-group-padding;
+    border-bottom: $select-group-border;
+  }
+}

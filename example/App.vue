@@ -44,6 +44,10 @@
         <tri-checkbox value="广州">广州</tri-checkbox>
         <tri-checkbox value="深圳">深圳</tri-checkbox>
         <tri-checkbox value="上海">上海</tri-checkbox>
+        <tri-checkbox value="清远">清远</tri-checkbox>
+        <tri-checkbox value="杭州">杭州</tri-checkbox>
+        <tri-checkbox value="洛杉矶">洛杉矶</tri-checkbox>
+        <tri-checkbox value="加拿大">加拿大</tri-checkbox>
       </tri-checkbox-group>
       <p>{{ value }}</p>
     </div>
@@ -122,6 +126,27 @@
         {{ star }} 星
       </tri-rate>
     </div>
+    <div>
+      <h1>Select</h1>
+      <tri-select>
+      </tri-select>
+      <p>{{ selectVal }}</p>
+      <tri-select v-model="selectVal" filterable>
+        <tri-select-option-group label="国内一线城市">
+          <tri-select-option value="Beijing" label="北京"/>
+          <tri-select-option value="Shanghai" label="上海" disabled/>
+          <tri-select-option value="Guangzhou" label="广州"/>
+          <tri-select-option value="Shenzhen" label="深圳"/>
+        </tri-select-option-group>
+        <tri-select-option-group label="其他城市">
+          <tri-select-option value="Qingyuan" label="清远"/>
+          <tri-select-option value="Hangzhou" label="杭州"/>
+          <tri-select-option value="Suzhou" label="苏州"/>
+          <tri-select-option value="LA" label="洛杉矶"/>
+          <tri-select-option value="Canada" label="加拿大"/>
+        </tri-select-option-group>
+      </tri-select>
+    </div>
   </div>
 </template>
 
@@ -142,6 +167,7 @@ export default {
       radioVal: '清远',
       radioVal2: '清远',
       star: 2,
+      selectVal: ''
     };
   },
   methods: {

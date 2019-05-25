@@ -1,0 +1,34 @@
+@import '@/common/style/index.scss';
+
+.tri-select-option {
+  position: relative;
+  padding: $input-padding;
+  font-size: $font-size;
+
+  &:hover {
+    background: $blue-50;
+    cursor: pointer;
+  }
+
+  &.disabled {
+    color: $grey-300;
+    cursor: not-allowed;
+
+    &:hover {
+      background: inherit;
+    }
+  }
+
+  &.selected {
+    font-weight: bold;
+    background: $blue-50;
+  }
+
+  .selected-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: $input-padding-left;
+    font-size: $font-size-l;
+  }
+}
