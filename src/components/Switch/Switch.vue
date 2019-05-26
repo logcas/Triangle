@@ -1,5 +1,6 @@
 <template>
   <div class="tri-switch-wrapper" :class="[size]">
+    <input class="tri-switch-checkbox" type="checkbox" :value="isActive" :name="name" :checked="isActive"/>
     <span class="text active" :style="activeTextStyle">{{ activeText }}</span>
     <div class="tri-switch" 
         :class="[size, {
@@ -37,6 +38,8 @@ export default {
     }
   },
   props: {
+    // name 原生属性
+    name: String,
     // 尺寸大小
     // `'normal'` / `'small'` / `'large'`
     size: {
@@ -69,7 +72,7 @@ export default {
     inactiveColor: {
       type: String,
       default: "#BFBFBF"
-    }
+    },
   },
   methods: {
     change() {

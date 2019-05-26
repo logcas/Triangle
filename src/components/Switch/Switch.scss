@@ -1,6 +1,13 @@
 @import '@/common/style/index.scss';
 
 .tri-switch-wrapper {
+
+  .tri-switch-checkbox {
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+
   .text {
     display: inline-block;
     vertical-align: middle;
