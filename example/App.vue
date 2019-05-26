@@ -56,15 +56,14 @@
       <tri-switch
         size="small"
         v-model="isActivate"
-        disabled
         active-text="activate"
         inactive-text="unactivate"
+        name="switchval"
       />
       <br>
       <br>
       <tri-switch
         v-model="isActivate"
-        disabled
         active-color="#13CE66"
         inactive-color="#FF4949"
         active-text="activate"
@@ -75,7 +74,6 @@
       <tri-switch
         size="large"
         v-model="isActivate"
-        disabled
         active-text="activate"
         inactive-text="unactivate"
       />
@@ -147,15 +145,18 @@
         </tri-select-option-group>
       </tri-select>
     </div>
+    <form-test></form-test>
   </div>
 </template>
 
 <script>
 import IconDisplayer from "../src/components/Icon/IconDisplayer.vue";
+import FormTest from './components/Form';
 export default {
   name: "app",
   components: {
-    [IconDisplayer.name]: IconDisplayer
+    [IconDisplayer.name]: IconDisplayer,
+    [FormTest.name]: FormTest
   },
   data() {
     return {

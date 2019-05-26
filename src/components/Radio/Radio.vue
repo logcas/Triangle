@@ -5,6 +5,7 @@
            :disabled="disabled"
            :checked="isChecked"
            :name="name"
+           :value="value"
            @focus="$emit('focus', $event)"
            @blur="$emit('blue', $event)"
            />
