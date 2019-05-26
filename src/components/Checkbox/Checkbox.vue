@@ -6,6 +6,7 @@
             :checked="isChecked" 
             type="checkbox" 
             @change="change"
+            :value="label"
             :disabled="disabled"/>
     </span>
     <label class="tri-checkbox-label">

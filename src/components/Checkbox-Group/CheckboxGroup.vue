@@ -19,7 +19,9 @@ export default {
     value: {
       type: Array,
       default: () => []
-    }
+    },
+    // name 表单用
+    name: String
   },
   data() {
     return {
