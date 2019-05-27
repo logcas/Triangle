@@ -1,0 +1,20 @@
+@import '@/common/style/index.scss';
+
+.tri-textarea {
+  @include control-border($border-color);
+  @include focus-shadow($brand-blue-100);
+
+  box-sizing: border-box;
+  outline: none;
+  -webkit-appearance: none;
+  width: 100%;
+  transition: box-shadow $transition-time $transition-func;
+  font-size: $font-size;
+  color: $text-color;
+  padding: $textarea-padding;
+  line-height: $textarea-line-height;
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}

@@ -110,7 +110,9 @@ $border-radius: 5px;
 $border-width: 1px;
 $border-color: $grey-300;
 
-$transition: all .2s ease-in;
+$transition-func: ease-in;
+$transition-time: .2s;
+$transition: all $transition-time $transition-func;
 
 /* button */
 $button-font-size: 14px;
@@ -179,3 +181,10 @@ $select-width: 240px;
 $select-group-border: 1px solid $grey-100;
 $select-group-margin: 0 10px;
 $select-group-padding: 10px 0;
+
+/* Textarea */
+$textarea-padding-x: 8px;
+$textarea-padding-y: $textarea-padding-x;
+$textarea-padding: $textarea-padding-y $textarea-padding-x;
+$textarea-line-height: 20px;
+$textarea-height: 52px;
