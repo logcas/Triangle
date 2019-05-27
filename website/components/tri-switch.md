@@ -7,6 +7,7 @@
 <!-- @vuese:tri-switch:props:start -->
 |Name|Description|Type|Required|Default|
 |---|---|---|---|---|
+|name|name 原生属性|`String`|`false`|-|
 |size|尺寸大小`'normal'` / `'small'` / `'large'`|`String`|`false`|"normal"|
 |isActive|是否激活|`Boolean`|`false`|false|
 |disabled|禁用|`Boolean`|`false`|false|

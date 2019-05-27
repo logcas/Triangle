@@ -8,6 +8,7 @@
 |Name|Description|Type|Required|Default|
 |---|---|---|---|---|
 |value|选择器的值|`Array`|`false`||
+|name|name 表单用|`String`|`false`|-|
 
 <!-- @vuese:tri-checkbox-group:props:end -->
 

@@ -35,7 +35,8 @@ module.exports = {
           '/form/switch',
           '/form/radio',
           '/form/rate',
-          '/form/select'
+          '/form/select',
+          '/form/textarea'
         ]
       },
     ]

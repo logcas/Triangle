@@ -13,6 +13,7 @@ import Rate from '@/components/Rate';
 import Select from '@/components/Select';
 import SelectOption from '@/components/Select-Option';
 import SelectOptionGroup from '@/components/Select-Option-Group';
+import Textarea from '@/components/Textarea';
 
 const components = [
   Button,
@@ -29,7 +30,8 @@ const components = [
   Rate,
   Select,
   SelectOption,
-  SelectOptionGroup
+  SelectOptionGroup,
+  Textarea
 ]
 
 export default ({

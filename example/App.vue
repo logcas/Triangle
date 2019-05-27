@@ -145,7 +145,13 @@
         </tri-select-option-group>
       </tri-select>
     </div>
-    <form-test></form-test>
+    <div style="padding: 20px;">
+      <h1>Textarea</h1>
+      <tri-textarea :autoresize="true" v-model="text"></tri-textarea>
+      {{ text }}
+      <tri-textarea disabled v-model="text"></tri-textarea>
+      <tri-textarea :rows="50" v-model="text" resize="both"></tri-textarea>
+    </div>
   </div>
 </template>
 
@@ -168,7 +174,8 @@ export default {
       radioVal: '清远',
       radioVal2: '清远',
       star: 2,
-      selectVal: ''
+      selectVal: '',
+      text: '',
     };
   },
   methods: {
