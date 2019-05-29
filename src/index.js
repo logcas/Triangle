@@ -13,6 +13,7 @@ import Select from './components/Select';
 import SelectOption from './components/Select-Option';
 import SelectOptionGroup from './components/Select-Option-Group';
 import Textarea from './components/Textarea';
+import DatePicker from './components/Date-Picker';
 
 const components = [
   Button,
@@ -29,7 +30,8 @@ const components = [
   Select,
   SelectOption,
   SelectOptionGroup,
-  Textarea
+  Textarea,
+  DatePicker
 ];
 
 const install = function install(Vue) {

@@ -1,0 +1,120 @@
+@import '@/common/style/index.scss';
+
+.tri-date {
+  display: inline-block;
+  user-select: none;
+
+  .month-item {
+    padding: 10px;
+    font-size: $font-size;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &.current {
+      color: $color-primary;
+    }
+
+    span {
+      display: block;
+      width: 50px;
+      text-align: center;
+    }
+  }
+
+  th, td {
+    font-size: $font-size;
+    padding: 8px 0;
+    border: none;
+  }
+  
+  .tri-date-header {
+    text-align: center;
+    position: relative;
+
+    .header-date {
+      display: inline-block;
+      height: 30px;
+      margin: 5px 0;
+      padding: 0 5px;
+      line-height: 30px;
+      border-radius: $border-radius;
+
+      &:hover {
+        cursor: pointer;
+        background: $grey-100;
+      }
+
+      &.month {
+        margin-left: 5px;
+      }
+    }
+
+    .tri-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .tri-date-table {
+    border-collapse: collapse;
+    margin: 5px;
+  }
+
+  .tri-date-week {
+    th {
+      margin: 0;
+      border-spacing: 0;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .tri-date-item {
+    cursor: not-allowed;
+    color: $grey-300;
+
+    span {
+      display: block;
+      width: 36px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    &.selectable {
+      color: $title-color;
+      cursor: pointer;
+      &:hover {
+        background: $brand-blue-100;
+        border-radius: 50%;
+      }
+    }
+
+    &.selected span {
+      background: $brand-blue-300;
+      color: $color-white;
+    }
+
+    &.start-date span {
+      border-top-left-radius: 18px;
+      border-bottom-left-radius: 18px;
+    }
+
+    &.end-date span {
+      border-top-right-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+
+
+  }
+
+}
