@@ -1,5 +1,18 @@
 <template>
   <div id="app">
+    <div>
+      <h1>DatePicker</h1>
+      <p>按年选择：{{year}}</p>
+      <tri-date-picker type="year" v-model="year"></tri-date-picker>
+      <p>按月选择：{{month}}</p>
+      <tri-date-picker type="month" v-model="month"></tri-date-picker>
+      <p>单日：{{date}}</p>
+      <tri-date-picker v-model="date"></tri-date-picker>
+      <p>范围：{{daterange}}</p>
+      <tri-date-picker type="daterange" v-model="daterange"></tri-date-picker>
+      <p>多选：{{datemulti}}</p>
+      <tri-date-picker type="datemulti" v-model="datemulti"></tri-date-picker>
+    </div>
     <tri-button iconName="search" iconButton style="margin-right: 5px" :loading="isLoading"></tri-button>
     <tri-button iconName="search" type="primary" :loading="isLoading" style="margin-right: 5px">测试按钮</tri-button>
     <tri-button iconName="search" type="error" :loading="isLoading" style="margin-right: 5px">测试按钮</tri-button>
@@ -176,6 +189,11 @@ export default {
       star: 2,
       selectVal: '',
       text: '',
+      year: '',
+      month: '',
+      date: '',
+      daterange: [],
+      datemulti: [],
     };
   },
   methods: {

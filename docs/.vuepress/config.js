@@ -36,7 +36,8 @@ module.exports = {
           '/form/radio',
           '/form/rate',
           '/form/select',
-          '/form/textarea'
+          '/form/textarea',
+          '/form/datepicker',
         ]
       },
     ]
