@@ -16,3 +16,17 @@ export const debounce = (fn = noop, wait = 0, immediate = false) => {
     }, wait);
   }
 }
+
+// 时间串解析
+export const parseTimeString = (timeStr, n = 2) => {
+  let t;
+  try {
+    t = timeStr.split(':');
+    for(let i = 0;i < n; ++i) {
+      t[i] = t[i] ? isNaN(Number(t[i])) ? 0 : Number(t[i]) : 0;
+    }
+  } catch(e) {
+    t = [0, 0, 0];
+  }
+  return t;
+}

@@ -1,0 +1,60 @@
+@import '@/common/style/index.scss';
+
+$scroll-bar-item-height: 32px;
+
+.pickers {
+  position: relative;
+  overflow: hidden;
+
+  .active-box {
+    position: absolute;
+    height: $scroll-bar-item-height;
+    width: 100%;
+    top: 2.5 * $scroll-bar-item-height;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    background: $grey-50;
+  }
+
+  .tri-time-spinner {
+    float: left;
+  }
+}
+
+.tri-time-spinner {
+  position: relative;
+  width: 60px;
+  height: 6 * $scroll-bar-item-height;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tri-time-scrollbar {
+    padding: 2.5 * $scroll-bar-item-height 0;
+    font-size: $font-size;
+    list-style: none;
+    margin: 0;
+
+    .tri-time-scrollbar-item {
+      height: $scroll-bar-item-height;
+      line-height: $scroll-bar-item-height;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        background: $brand-blue-50;
+      }
+
+      &.active {
+        font-weight: 900;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

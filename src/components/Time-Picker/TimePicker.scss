@@ -1,0 +1,10 @@
+@import '@/common/style/index.scss';
+
+
+.tri-time-picker {
+  display: inline-block;
+
+  .tri-time-picker-no-fixed {
+    position: relative;
+  }
+}
