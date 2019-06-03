@@ -15,6 +15,7 @@ import SelectOption from '@/components/Select-Option';
 import SelectOptionGroup from '@/components/Select-Option-Group';
 import Textarea from '@/components/Textarea';
 import DatePicker from '@/components/Date-Picker';
+import TimePicker from '@/components/Time-Picker';
 
 const components = [
   Button,
@@ -33,7 +34,8 @@ const components = [
   SelectOption,
   SelectOptionGroup,
   Textarea,
-  DatePicker
+  DatePicker,
+  TimePicker
 ]
 
 export default ({

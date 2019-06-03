@@ -38,6 +38,7 @@ module.exports = {
           '/form/select',
           '/form/textarea',
           '/form/datepicker',
+          '/form/timepicker'
         ]
       },
     ]

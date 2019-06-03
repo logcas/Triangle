@@ -1,6 +1,15 @@
 <template>
   <div id="app">
     <div>
+      <h1>TimePicker</h1>
+      <p>{{ time1 }}</p>
+      <tri-time-picker v-model="time1" placeholder="开始时间" type="no-fixed" :picker-options="{
+        timeRange: [['10:30:00', '11:45:00'], ['14:25:00', '18:35:00']]
+      }"/>
+      <p>{{ time2 }}</p>
+      <tri-time-picker v-model="time2" placeholder="开始时间" type="fixed"/>
+    </div>
+    <div>
       <h1>DatePicker</h1>
       <p>按年选择：{{year}}</p>
       <tri-date-picker type="year" v-model="year"></tri-date-picker>
@@ -194,6 +203,8 @@ export default {
       date: '',
       daterange: [],
       datemulti: [],
+      time1: '',
+      time2: '',
     };
   },
   methods: {
