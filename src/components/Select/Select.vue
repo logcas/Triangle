@@ -1,5 +1,5 @@
 <template>
-  <div class="tri-select" :class="{'focus': isFocus, 'disabled': disabled}" ref="baseRef">
+  <div class="tri-select" :class="{'focus': isFocus, 'disabled': disabled}" ref="baseRef" v-clickoutside="inputBlur">
     <div class="tri-select-wrapper" @click="selectFocus">
       <div
         class="tri-select-multiple"
@@ -22,7 +22,6 @@
         type="text"
         ref="inputRef"
         @focus="inputFocus"
-        @blur="inputBlur"
         @input="onInput"
         :value="currentLabel"
         :placeholder="placeholder"
@@ -61,12 +60,16 @@ import Dropdown from "./SelectDropdown";
 import Emitter from "@/mixins/Emitter";
 import Tag from "@/components/Tag/Tag.vue";
 import SelectOption from "@/components/Select-Option/SelectOption.vue";
-import { debounce } from '@/utils';
+import { debounce } from "@/utils";
+import clickOutSide from '@/directives/clickoutside';
 // 选择框
 // @group Form
 export default {
   name: "tri-select",
   mixins: [Emitter],
+  directives: {
+    'clickoutside': clickOutSide
+  },
   components: {
     [Icon.name]: Icon,
     [Dropdown.name]: Dropdown,
@@ -176,6 +179,7 @@ export default {
           );
         }
       } else {
+        this.isFocus = false;
         this.currentValue = value;
         this.currentLabel = label;
       }
@@ -197,7 +201,7 @@ export default {
     removeTag(item) {
       // 多选时标签移除的时候触发
       // @arg 移除的标签
-      this.$emit('remove-tag', item);
+      this.$emit("remove-tag", item);
       this.setValue(item);
     }
   },
@@ -229,8 +233,8 @@ export default {
     this.broadcast("tri-select-option", "send-option");
   },
   beforeDestroy() {
-    this.$off('set-val');
-    this.$off('fetch-option');
+    this.$off("set-val");
+    this.$off("fetch-option");
   }
 };
 </script>
