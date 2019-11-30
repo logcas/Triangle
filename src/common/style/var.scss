@@ -110,8 +110,8 @@ $border-radius: 5px;
 $border-width: 1px;
 $border-color: $grey-300;
 
-$transition-func: ease-in;
-$transition-time: .2s;
+$transition-func: ease-in-out;
+$transition-time: .3s;
 $transition: all $transition-time $transition-func;
 
 /* button */
