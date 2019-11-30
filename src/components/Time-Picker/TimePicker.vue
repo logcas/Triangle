@@ -154,6 +154,7 @@ export default {
         this.currentValue = val;
       } else {
         this.currentValue2 = val;
+        console.log(val);
       }
       // 选择 改变时触发
       // @arg 新的时间

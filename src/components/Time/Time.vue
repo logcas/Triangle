@@ -77,9 +77,6 @@ export default {
     },
     s() {
       this.$emit('input', `${this.h}:${this.m}:${this.s}`);
-    },
-    value(val) {
-      this.parseTime(val);
     }
   },
   data() {
@@ -101,6 +98,7 @@ export default {
     },
     onClear() {
       this.broadcast('tri-time-spinner', 'clear');
+      this.$emit('input', '');
     }
   },
   created() {

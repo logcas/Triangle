@@ -28,7 +28,8 @@ export default {
   },
   data() {
     return {
-      activedIndex: -1
+      activedIndex: -1,
+      reset: false
     };
   },
   watch: {
@@ -37,6 +38,10 @@ export default {
       this.setIndex(idx);
     },
     activedIndex() {
+      if (this.reset) {
+        this.reset = false;
+        return;
+      }
       this.$emit("input", this.items[this.activedIndex]);
     }
   },
@@ -54,8 +59,8 @@ export default {
         root.scrollTop = this.activedIndex * ITEM_HEIGHT;
       });
     },
-    setIndex(index, render) {
-      if(this.isDisabled(this.items[index])) return;
+    setIndex(index, render, force = false) {
+      if(this.isDisabled(this.items[index]) && !force) return;
       this.activedIndex = index;
       if (render) {
         this.$nextTick(() => {
@@ -71,7 +76,8 @@ export default {
   created() {
     this.activedIndex = this.items.indexOf(this.value);
     this.$on('clear', () => {
-      this.setIndex(0, true);
+      this.reset = true;
+      this.setIndex(0, true, true);
     });
   },
 };
