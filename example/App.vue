@@ -151,7 +151,7 @@
       <tri-select>
       </tri-select>
       <p>{{ selectVal }}</p>
-      <tri-select v-model="selectVal" filterable>
+      <tri-select v-model="selectVal">
         <tri-select-option-group label="国内一线城市">
           <tri-select-option value="Beijing" label="北京"/>
           <tri-select-option value="Shanghai" label="上海" disabled/>

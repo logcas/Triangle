@@ -21,7 +21,6 @@
         :name="name"
         type="text"
         ref="inputRef"
-        @focus="inputFocus"
         @input="onInput"
         :value="currentLabel"
         :placeholder="placeholder"
@@ -41,7 +40,7 @@
     <transition :name="slideDown ? 'slide-down' : 'slide-up'">
       <tri-select-dropdown
         :class="slideDown ? 'slide-down' : 'slide-up'"
-        v-show="isFocus && (filterable && currentLabel)"
+        v-show="isFocus && filterable"
       >
         <tri-select-option
           v-for="item in filtedItems"
@@ -117,12 +116,12 @@ export default {
         height: 0,
         padding: 0
       };
-    },
-    filtedItems() {
-      return this.allItems.filter(
-        ({ label }) => label.indexOf(this.currentLabel) !== -1
-      );
     }
+    // filtedItems() {
+    //   return this.allItems.filter(
+    //     ({ label }) => label.indexOf(this.currentLabel) !== -1
+    //   );
+    // }
   },
   data() {
     return {
@@ -132,12 +131,14 @@ export default {
       currentLabel: "",
       currentItems: [],
       // for filterable
-      allItems: []
+      allItems: [],
+      filtedItems: []
     };
   },
   methods: {
     inputFocus(e) {
       this.isFocus = true;
+      this.filterItem();
       // 当 input 获取焦点时触发
       // @arg event
       this.$emit("focus", e);
@@ -149,14 +150,23 @@ export default {
       this.$emit("blur", e);
     },
     onInput(e) {
+      console.log('input');
+      this.isFocus = true;
       this.currentLabel = e.target.value;
-      this.setValue({ value: this.currentLabel, label: this.currentLabel });
+      this.filterItem();
+      this.setValue({ value: this.currentLabel, label: this.currentLabel }, !this.filterable);
     },
     selectFocus(e) {
       if (this.disabled) return;
-      this.$refs.inputRef.focus();
+      console.log('click');
+      console.log(this.isFocus);
+      if (this.isFocus) {
+        this.inputBlur();
+      } else {
+        this.inputFocus();
+      }
     },
-    setValue(item) {
+    setValue(item, blur = true) {
       const { value, label } = item;
       if (this.multiple) {
         this.currentValue || (this.currentValue = []);
@@ -179,7 +189,9 @@ export default {
           );
         }
       } else {
-        this.isFocus = false;
+        if (blur) {
+          this.isFocus = false;
+        }
         this.currentValue = value;
         this.currentLabel = label;
       }
@@ -203,6 +215,11 @@ export default {
       // @arg 移除的标签
       this.$emit("remove-tag", item);
       this.setValue(item);
+    },
+    filterItem() {
+      this.filtedItems = this.allItems.filter(
+        ({ label }) => label.indexOf(this.currentLabel) !== -1
+      );
     }
   },
   created() {

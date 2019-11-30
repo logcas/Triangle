@@ -2,7 +2,7 @@
   <transition name="fade">
     <span class="tri-tag" :class="type" v-show="isVisible" :style="colorStyle">
       <slot></slot>
-      <span @click="onClose">
+      <span @click.stop="onClose">
         <tri-icon class="close-btn" iconName="closefill" v-if="closable"></tri-icon>
       </span>
     </span>
